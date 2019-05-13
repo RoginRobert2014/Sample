@@ -1,0 +1,33 @@
+<div class="main-div-block">
+    <div class="content-block">
+        <div class="single-content-block" *ngFor="let listdata of dashboardDashboardData.elements">
+            <div class="left-content">
+                <div class="row-one">
+                    <div class="item-id">Id: {{listdata.id}}</div>
+                    <div class="item-type">Type: {{listdata.payload.reportType}}</div>
+                </div>
+                <div class="row-two">
+                    <div class="item-state">State: {{listdata.state}}</div>
+                    <div class="item-message">Message: {{listdata.payload.message}} </div>
+                </div>
+                <div class="row-three">
+                    <div class="item-details">
+                        <a href="http://www.google.com">Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="block-button">
+                    <div class="block-button-style" (click)="blockItem(listdata.id)">
+                        <span class="block-button-Text">Block</span>
+                    </div>
+                </div>
+                <div class="resolve-button">
+                    <div class="resolve-button-style" (click)="resolveItem(listdata.id)">
+                        <span class="resolve-button-Text">Resolve</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
